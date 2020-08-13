@@ -1,0 +1,498 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: BLACK;
+    padding-top: 2rem;
+}
+
+
+/*==============================
+Variables
+================================*/
+
+:root {
+    --colorPrincipal: #3ADAE1;
+}
+
+
+/*==============================
+General
+================================*/
+
+.contenedor {
+    max-width: auto;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}
+
+.logoMisMascotas {
+    /**Logo responsive**/
+    width: 100%;
+    height: auto;
+}
+
+a {
+    color: WHITE;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+h1,
+h2 {
+    color: var(--colorPrincipal);
+    font-size: 3rem;
+}
+
+h3 {
+    color: var(--colorPrincipal);
+    font-size: 2rem;
+}
+
+p {
+    color: WHITE;
+    font-size: 40px;
+}
+
+
+/*==============================
+header
+================================*/
+
+.headerMenu,
+.contenidoMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a {
+    margin-right: 1rem;
+}
+
+.menu a:active,
+.menu a:hover,
+.menuFooter a:active,
+.menuFooter a:hover {
+    border-bottom: solid 5px var(--colorPrincipal);
+}
+
+.menu {
+    margin-right: 5rem;
+}
+
+.login {
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    border: 1px solid var(--colorPrincipal);
+}
+
+.login:hover {
+    background-color: var(--colorPrincipal);
+    ;
+}
+
+.headerImage {
+    margin: 1rem 0;
+    height: 700px;
+    width: auto;
+    background-image: url("../Recursos/slider.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/*==============================
+main
+================================*/
+
+.app {
+    display: flex;
+    flex-direction: column;
+}
+
+.app1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.imagen1 img {
+    width: 20rem;
+}
+
+.descripcion {
+    padding: 0 2rem;
+}
+
+
+/*==============================
+Footer
+================================*/
+
+footer {
+    margin: 5rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logoStore {
+    width: 1rem;
+}
+
+.menuFooter,
+.descargas {
+    display: flex;
+    flex-direction: column;
+}
+
+.menuFooter a {
+    padding-bottom: 1rem;
+}
+
+.redes i {
+    font-size: 3rem;
+    margin-right: 1rem;
+}
+
+.facebook,
+.instagram {
+    color: WHITE;
+}
+
+.facebook:hover,
+.instagram:hover {
+    color: var(--colorPrincipal);
+}
+
+.copy {
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+/*==============================
+Nosotros
+================================*/
+
+
+/*==============================
+Main
+================================*/
+
+.nosotros h2 {
+    color: var(--colorPrincipal);
+    font-size: 3rem;
+    text-align: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+}
+
+.vision {
+    padding: 0 1rem;
+}
+
+
+/*==============================
+Terminos
+================================*/
+
+
+/*==============================
+Main
+================================*/
+
+.terminos {
+    padding-top: 2rem;
+}
+
+.terminos h2,
+.terminos h3,
+.soporte h2 {
+    text-align: center;
+}
+
+.terminos p {
+    font-size: 1rem;
+}
+
+.terminos ul {
+    padding: 2rem 1rem;
+}
+
+.terminos li {
+    color: WHITE;
+}
+
+.ulTerminos {
+    list-style: none;
+    /* Quitamos los marcadores */
+}
+
+.liTerminos::before {
+    /* Añadimos contenido antes de cada elemento de la lista */
+    content: "\2022";
+    /* Insertamos el marcador */
+    padding-right: 8px;
+    /* Establecemos el espacio entre las viñetas y el list item */
+    color: var(--colorPrincipal);
+    /* Coloreamos la viñeta */
+}
+
+
+/*==============================
+Soporte
+================================*/
+
+.soporte p {
+    font-size: 20px;
+}
+
+.soporte h3 {
+    font-size: 30px;
+}
+
+
+/*==============================
+Contacto
+================================*/
+
+.mainLogin h4 {
+    color: WHITE;
+    font-size: 2rem;
+}
+
+.contacto h2 {
+    text-align: center;
+}
+
+.formContacto {
+    background-color: var(--colorPrincipal);
+    /**Color del formulario**/
+    padding: 2rem;
+    /**Separacion **/
+    border-radius: 10px;
+    /**Radio de los bordes del formulario**/
+    max-width: 700px;
+    /**Tamaño del formulario**/
+    margin: 0 auto;
+    /**Centra el formulario en el espacio disponible de la clase padre**/
+}
+
+.campo {
+    display: flex;
+    /**Activamos el flex-box**/
+    margin-bottom: 1rem;
+    /**Destancia de los campos por abajo**/
+    padding-right: 2rem;
+    /**Distancia desde arriba**/
+    align-items: center;
+    /**Centra verticalmente**/
+}
+
+.campo label {
+    flex: 0 0 10rem;
+    color: WHITE;
+    font-size: 20px;
+}
+
+.campo input[type="text"],
+
+/**Tamaño de los campos horizontal**/
+
+.campo input[type="tel"],
+.campo input[type="mail"],
+.campo textarea {
+    flex: 1;
+    height: rem;
+}
+
+.campo textarea {
+    /**Tamaño del campo en vertical**/
+    height: 4rem;
+}
+
+.boton {
+    font-family: var(--fuentehys);
+    background-color: #525255;
+    /**Color boton**/
+    color: var(--colorprimario);
+    /**Color texto boton**/
+    font-weight: 400;
+    /**Grosor de la letra del boton**/
+    text-transform: uppercase;
+    /**Toda en mayuscula**/
+    font-size: 1.2rem;
+    /**Tamaño de la letra**/
+    text-align: center;
+    padding: .5rem 3rem;
+    /**Alto y ancho del boton**/
+    border-radius: 5px;
+    /**Radio de las puntas del boton**/
+    display: inline-block;
+    margin-top: .5rem;
+    /**Margen por arriba**/
+    flex: 0 0 100%;
+    color: WHITE;
+}
+
+.boton:hover {
+    cursor: pointer;
+    /**Cambiar cursor por la mano**/
+    background-color: #6a6a6b;
+}
+
+
+/*==============================
+Login
+================================*/
+
+.FormLogin {
+    align-items: center;
+    text-align: center;
+}
+
+.FormLogin .olvide {
+    text-align: inherit;
+}
+
+.ulLogin,
+.botonRedes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+}
+
+.login-register {
+    border: solid 1px var(--colorPrincipal);
+    border-radius: 10px;
+    padding: 2rem 0;
+}
+
+.FormLogin {
+    padding: 30px 30px;
+    /**Separacion **/
+    max-width: 700px;
+    /**Tamaño del formulario**/
+    margin: 0 auto;
+    /**Centra el formulario en el espacio disponible de la clase padre**/
+}
+
+.campoLogin {
+    margin-bottom: 1rem;
+}
+
+.inputStyle {
+    font-size: 14px;
+    padding: 0 20px;
+    width: 400px;
+    height: 40px;
+}
+
+.olvide {
+    font-size: 1rem;
+}
+
+.botonIngresar {
+    background-color: #525255;
+    /**Color boton**/
+    color: WHITE;
+    /**Color texto boton**/
+    font-weight: 400;
+    /**Grosor de la letra del boton**/
+    text-transform: uppercase;
+    /**Toda en mayuscula**/
+    font-size: 1.2rem;
+    /**Tamaño de la letra**/
+    text-align: center;
+    padding: 1rem 3rem;
+    flex: 0 0 100%;
+    color: WHITE;
+    width: 400px;
+    border-radius: 10px;
+    border: 1px solid var(--colorPrincipal);
+}
+
+.botonIngresar:hover {
+    -webkit-box-shadow: 0px 4px 10px 0px rgba(58, 218, 225, 1);
+    -moz-box-shadow: 0px 4px 10px 0px rgba(58, 218, 225, 1);
+    box-shadow: 0px 4px 10px 0px rgba(58, 218, 225, 1);
+}
+
+.botonF,
+.botonG {
+    color: WHITE;
+    /**Color texto boton**/
+    font-weight: 400;
+    /**Grosor de la letra del boton**/
+    text-transform: uppercase;
+    /**Toda en mayuscula**/
+    font-size: 1.2rem;
+    /**Tamaño de la letra**/
+    text-align: center;
+    padding: 1rem 3rem;
+    /**Alto y ancho del boton**/
+    border-radius: 5px;
+    /**Radio de las puntas del boton**/
+    display: inline-block;
+    margin-top: .5rem;
+    /**Margen por arriba**/
+    flex: 0 0 100%;
+    color: WHITE;
+    width: 200px;
+}
+
+.botonG {
+    background-color: tomato;
+    margin: .5rem 0 0 .5rem;
+}
+
+.botonF {
+    background-color: steelblue;
+    margin: .5rem .5rem 0 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.ulLogin .liLogin {
+    padding: 0 1.5rem;
+}
+
+.botonRedes {
+    display: flex;
+    flex-direction: row;
+}
+
+.botonRedes a li i {
+    font-size: 30px;
+}
+
+.loginRedes h4 {
+    margin-bottom: 0;
+}
+
+.botonRedes {
+    margin-top: 0;
+}
